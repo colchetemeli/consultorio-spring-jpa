@@ -33,7 +33,7 @@ public class Turn {
     private Diary diary;
 
     @ManyToOne
-    @JsonBackReference(value = "patient-turn")
+    //@JsonBackReference(value = "patient-turn")
     @JoinColumn(name = "id_patient")
     private Patient patient;
 

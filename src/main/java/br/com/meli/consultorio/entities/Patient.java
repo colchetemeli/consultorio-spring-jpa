@@ -52,7 +52,7 @@ public class Patient {
     private String email;
 
     @OneToMany(mappedBy = "patient")
-    @JsonManagedReference(value = "patient-turn")
+    //@JsonManagedReference(value = "patient-turn")
     private List<Turn> turns;
 
     @Override

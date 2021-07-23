@@ -2,6 +2,7 @@ package br.com.meli.consultorio.service;
 
 import br.com.meli.consultorio.entities.Dentist;
 import br.com.meli.consultorio.repository.DentistRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -12,6 +13,7 @@ public class DentistService {
 
     private final DentistRepository dentistRepository;
 
+    @Autowired
     public DentistService(DentistRepository dentistRepository) {
         this.dentistRepository = dentistRepository;
     }
