@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "81877bd1-7b47-42d7-9df6-badcdb9f106f",
+		"name": "Consultorio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatePatient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Patient\",\n\t\"lastName\": \"LastName\",\n\t\"adress\": \"rua 14\",\n\t\"dni\": \"124141\",\n\t\"birthDate\": \"2021-07-22\",\n\t\"phone\": \"313131313\",\n\t\"email\": \"213131313@hotmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultorio/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTurn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Patient\",\n\t\"lastName\": \"LastName\",\n\t\"adress\": \"rua 14\",\n\t\"dni\": \"124141\",\n\t\"birthDate\": \"2021-07-22\",\n\t\"phone\": \"313131313\",\n\t\"email\": \"213131313@hotmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultorio/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTurnStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"ABERTO\",\n\t\"description\": \"TESTE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/consultorio/turnstatus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"turnstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDentist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDiary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDiaryByDentist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist/1/diary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist",
+						"1",
+						"diary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTurnByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist/1/diary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist",
+						"1",
+						"diary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPatientsByDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist/1/diary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist",
+						"1",
+						"diary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDentistByDate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consultorio/dentist/1/diary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consultorio",
+						"dentist",
+						"1",
+						"diary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
