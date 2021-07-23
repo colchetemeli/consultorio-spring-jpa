@@ -1,8 +1,7 @@
 package br.com.meli.consultorio.service;
 
-import br.com.meli.consultorio.daos.TurnDao;
 import br.com.meli.consultorio.entities.Turn;
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.meli.consultorio.repository.TurnRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,18 +9,17 @@ import java.util.List;
 @Service
 public class TurnService {
 
-    private TurnDao turnDao;
+    private final TurnRepository turnRepository;
 
-    @Autowired
-    public TurnService() {
-        this.turnDao = new TurnDao();
+    public TurnService(TurnRepository turnRepository) {
+        this.turnRepository = turnRepository;
     }
 
     public Turn create(Turn turn) {
-        return turnDao.create(turn);
+        return turnRepository.save(turn);
     }
 
     public List<Turn> listTurnByStatus(String status) {
-        return this.turnDao.listTurnByStatus(status);
+        return this.turnRepository.findByTurnStatusName(status);
     }
 }

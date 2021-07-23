@@ -1,5 +1,6 @@
 package br.com.meli.consultorio.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -32,7 +33,7 @@ public class Turn {
     private Diary diary;
 
     @ManyToOne
-   // @JsonBackReference(value = "patient-turn")
+    @JsonBackReference(value = "patient-turn")
     @JoinColumn(name = "id_patient")
     private Patient patient;
 

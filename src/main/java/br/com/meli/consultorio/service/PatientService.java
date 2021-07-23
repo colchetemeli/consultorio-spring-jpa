@@ -1,28 +1,26 @@
 package br.com.meli.consultorio.service;
 
-import br.com.meli.consultorio.daos.PatientDao;
-import br.com.meli.consultorio.entities.Dentist;
+import br.com.meli.consultorio.repository.PatientRepository;
 import br.com.meli.consultorio.entities.Patient;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
 public class PatientService {
 
-    private PatientDao patientDao;
+    private final PatientRepository patientRepository;
 
-    public PatientService() {
-        this.patientDao = new PatientDao();
+    public PatientService(PatientRepository patientRepository) {
+        this.patientRepository = patientRepository;
     }
 
     public List<Patient> listAllPatientsByDay(String date) {
-        return this.patientDao.listAllPatientsByDay(date);
+        return this.patientRepository.findByTurnsDay(LocalDate.parse(date));
     }
 
     public Patient create(Patient patient) {
-
-        return this.patientDao.create(patient);
+        return this.patientRepository.save(patient);
     }
 }
